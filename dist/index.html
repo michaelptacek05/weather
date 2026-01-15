@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" src="/src/style.css" />
+        <script src="bundle.js" defer></script>
+        <title>Počasí</title>
+    </head>
+    <body>
+        <h1>Počasí</h1>
+
+        <div class="searchBox">
+            <input
+                class="cityInput"
+                type="text"
+                placeholder="Zadej město (např. Praha)"
+            />
+            <button class="searchButton">Hledat</button>
+        </div>
+        <div class="loader"></div>
+        <div class="container">
+            <div class="weatherDisplay">
+                <h2 class="display-address">---</h2>
+                <p class="display-temp">Teplota: -- °C</p>
+                <p class="display-desc">Podmínky: --</p>
+            </div>
+        </div>
+
+        <script src="bundle.js"></script>
+    </body>
+</html>
