@@ -1,10 +1,8 @@
 const path = require('path');
-// 1. NOVÉ: Načteme plugin
 const Dotenv = require('dotenv-webpack'); 
 
 module.exports = {
   entry: './src/index.ts',
-  // ... (tvoje nastavení module, resolve, atd. zůstává stejné) ...
   module: {
     rules: [
       {
@@ -24,6 +22,11 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist', 
+    hot: true,        
   },
   plugins: [
     new Dotenv()
